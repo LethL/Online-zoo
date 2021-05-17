@@ -1,0 +1,779 @@
+body {
+    margin: 0;
+    min-width: 1920px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: #6c7279;
+    -webkit-font-smoothing: antialiased;
+    background: #FFFFFF;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+p {
+    margin: 0 0 10px 0;
+}
+
+ul {
+    padding: 0;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.to__hide {
+    font-size: 0;
+    display: none;
+}
+
+/* Header
+************* */
+
+.header {
+    width: 100%;
+    max-height: 110px;
+    background-color: #F58021;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+}
+
+.header__logo {
+    cursor: pointer;
+    transition: opacity .1s linear;
+}
+
+.header__logo:hover {
+    opacity: 0.6;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 800px;
+}
+
+.header__nav {
+    display: flex;
+    justify-content: space-between;
+    width: 553px;
+    list-style: none;
+    margin: 0;
+    padding-top: 13px;
+
+}
+
+.nav__link {
+    font-weight: 600;
+    text-decoration: none;
+    line-height: 150%;
+    text-transform: uppercase;
+    color: #000000;
+
+    transition: color .1s linear;
+}
+
+.nav__link:hover {
+    color: #00A092;
+}
+
+.nav__link--active {
+    color: #00A092;
+    cursor: default;
+}
+
+.header__social {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    width: 180px;
+    margin: 0;
+    padding-top: 7px;
+}
+
+.social__link {
+    transition: opacity .1s linear;
+}
+
+.social__link:hover {
+    opacity: 0.6;
+}
+
+/* Burger menu
+************* */
+
+.burger {
+    display: none;
+    padding: 9px 2px;
+    margin-right: 45px;
+    margin-bottom: 5px;
+    border: 0;
+    background: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.burger__item {
+    display: block;
+    width: 30px;
+    height: 2.31px;
+
+    background-color: #000;
+
+    font-size: 0;
+    color: transparent;
+
+    position: relative;
+    transition: transform .13s linear;
+}
+
+.burger__item:first-child,
+.burger__item:last-child {
+    display: block;
+    width: 30px;
+    height: 2.31px;
+
+    background-color: #000;
+
+    font-size: 0;
+    color: transparent;
+
+    position: relative;
+}
+
+.burger__item:first-child {
+    top: -14px;
+}
+
+.burger__item:last-child {
+    bottom: -14px;
+}
+
+.burger.active .burger__item {
+    display: none;
+    font-size: 0;
+}
+
+.burger.active .burger__item:first-child {
+    background-color: #000;
+    transform-origin: left top;
+    transform: rotate(45deg) translateX(4px)
+    translateX(3px);
+    display: flex;
+}
+
+.burger.active .burger__item:last-child {
+    background-color: #000;
+    transform-origin: left bottom;
+    transform: rotate(-45deg) translateX(3px)
+    translateX(3px);
+    display: flex;
+}
+
+.burger.active .burger__item.white {
+    background-color: #FFFFFF;
+}
+
+/* Map
+************* */
+
+.map__title {
+    margin: 40px auto;
+    max-width: 600px;
+    font-weight: 600;
+    font-size: 54px;
+    line-height: 66px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #20113D;
+}
+
+.map__inner {
+    min-width: 320px;
+    padding-top: 30px;
+    position: relative;
+    width: 1406px;
+    height: 912px;
+}
+
+.map__map {
+    position: absolute;
+    right: 6px;
+}
+
+.map__tag {
+    position: absolute;
+    transition: transform .1s linear;
+}
+
+.map__tag:hover {
+    transform: scale(1.1);
+}
+
+.map__tag--koala {
+    right: 10.5%;
+    top: 69.7%;
+    cursor: default;
+}
+
+.map__tag--tiger {
+    left: 70.1%;
+    top: 57.1%;
+    cursor: default;
+}
+
+.map__tag--panda {
+    left: 65.71%;
+    bottom: 40.38%;
+}
+
+.map__tag--lemur {
+    left: 54.53%;
+    bottom: 13.2%;
+}
+
+.map__tag--gorilla {
+    right: 42.8%;
+    top: 53.65%;
+}
+
+.map__tag--lion {
+    right: 51.67%;
+    top: 52.33%;
+    cursor: default;
+}
+
+.map__tag--croc {
+    right: 71.3%;
+    top: 45.9%;
+    cursor: default;
+}
+
+.map__tag--eagle {
+    left: 9%;
+    top: 43.88%;
+}
+
+/* Footer
+************* */
+
+.footer {
+    margin-top: 179px;
+    height: 329px;
+    background: #20113D;
+}
+
+.footer__line--first {
+    display: flex;
+    justify-content: space-between;
+    padding: 70px 0;
+    align-items: center;
+    border-bottom: 1px solid #FFFFFF;
+}
+
+.footer__logos {
+    width: 414px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__nav {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    width: 426px;
+}
+
+.nav__link--footer {
+    color: #FFFFFF;
+}
+
+.testimonials__btn {
+    margin-top: 371px;
+    width: 359px;
+    height: 74px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 26px 25px;
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 5px;
+    text-decoration: none;
+    background: transparent;
+    transition: background .1s linear;
+}
+
+.btn__text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    width: 155px;
+    padding-top: 9px;
+    padding-right: 9px;
+}
+
+.testimonials__btn-footer {
+    margin-top: 0;
+}
+
+.btn__text--footer {
+    width: 266px;
+}
+
+.footer__line--second {
+    padding-top: 34px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__copyright {
+    display: flex;
+    justify-content: space-between;
+    width: 447px;
+}
+
+.footer__social {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+}
+
+/* @Media
+************* */
+
+@media (max-width: 1910px) {
+    body {
+        min-width: 1200px;
+    }
+
+    .wrapper {
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .header {
+        width: 100%;
+    }
+
+    .header__nav {
+        max-width: 481px;
+        margin-left: 59px;
+    }
+
+    .map {
+        width: 100%;
+    }
+
+    .map__inner {
+        height: 714px;
+    }
+
+    .wrapper--map {
+        max-width: 1200px;
+    }
+
+    .map__title {
+        margin: 0 auto;
+        padding-top: 30px;
+    }
+
+    .map__inner {
+        width: 100%;
+        padding-top: 16px;
+    }
+
+    .map__map {
+        right: 0;
+        max-width: 100%;
+    }
+
+    .map__tag--koala {
+        right: 9.3%;
+        top: 71.6%;
+    }
+
+    .map__tag--tiger {
+        left: 69.6%;
+        top: 59.6%;
+    }
+
+    .map__tag--panda {
+        left: 69.4%;
+        bottom: 39.2%;
+    }
+
+    .map__tag--lemur {
+        bottom: 6.4%;
+    }
+
+    .map__tag--gorilla {
+        right: 41.4%;
+        top: 54.1%;
+    }
+
+    .map__tag--lion {
+        right: 50.67%;
+        top: 51.33%;
+    }
+
+    .map__tag--croc {
+        right: 69.8%;
+        top: 46.6%;
+    }
+
+    .map__tag--eagle {
+        left: 8.5%;
+        top: 43.9%;
+    }
+
+
+    .footer {
+        width: 100%;
+        height: 329px;
+    }
+
+    .wrapper--footer {
+        max-width: 1120px;
+    }
+
+    .footer__line--first {
+        padding: 70px 0;
+    }
+
+    .footer__logos {
+        width: 344px;
+    }
+
+    .footer__nav {
+        width: 352px;
+    }
+
+    .testimonials__btn-footer {
+        margin: 0;
+        width: 360px;
+    }
+}
+
+
+@media (max-width: 1100px) {
+    body {
+        min-width: 640px;
+    }
+
+    .wrapper {
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .header {
+        width: 100%;
+        position: fixed;
+        z-index: 100;
+    }
+
+    .header__logo {
+        padding-left: 20px;
+    }
+
+    .header__nav {
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 0;
+        flex-direction: column;
+        width: 311px;
+        height: 754px;
+        background: #20113D;
+        align-items: center;
+        padding: 150px 0 269px;
+    }
+
+    .header__nav.show {
+        display: flex;
+    }
+
+    .nav__link {
+        color: #FFFFFF;
+    }
+
+    .nav__link--active {
+        color: #00A092;
+    }
+
+    .header__social {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .map {
+        padding-top: 110px;
+    }
+
+    .map__title {
+        font-weight: 500;
+        font-size: 42px;
+        line-height: 51px;
+    }
+
+    .map__inner {
+        padding-top: 69px;
+        height: 405px;
+    }
+
+    .map__tag {
+        width: 65px;
+        height: 75px;
+    }
+
+    .map__tag--koala {
+        right: 11.8%;
+        top: 85.6%;
+    }
+
+    .map__tag--tiger {
+        left: 70.6%;
+        top: 75.6%;
+    }
+
+    .map__tag--panda {
+        left: 70.4%;
+        bottom: 28.2%;
+    }
+
+    .map__tag--lemur {
+        left: 54.9%;
+        bottom: -1.6%;
+    }
+
+    .map__tag--gorilla {
+        right: 42.4%;
+        top: 69.7%;
+    }
+
+    .map__tag--lion {
+        right: 50.2%;
+        top: 68.33%;
+        height: 65px;
+    }
+
+    .map__tag--croc {
+        right: 70.8%;
+        top: 61.6%;
+    }
+
+    .map__tag--eagle {
+        left: 9.3%;
+        top: 60.9%;
+    }
+
+    
+    .footer {
+        width: 100%;
+        height: 545px;
+    }
+
+    .footer__line--first {
+        padding: 49px 0;
+        flex-direction: column;
+    }
+
+    .footer__logos {
+        width: 445px;
+    }
+
+    .footer__nav {
+        width: 446px;
+        padding-top: 14px;
+    }
+
+    .testimonials__btn-footer {
+        margin-top: 25px;
+        margin-left: 0px;
+        width: 360px;        
+    }
+
+    .footer__line--second {
+        flex-direction: column-reverse;
+        padding-top: 50px;
+    }
+
+    .footer__social {
+        width: 220px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 639px) {
+    body {
+        min-width: 320px;
+    }
+
+    .header {
+        width: 100%;
+    }
+
+    .header__nav {
+        width: 233px;
+        height: 504px;
+        padding: 130px 0 140px;
+    }
+
+    .burger {
+        margin-right: 34px;
+    }
+
+    .burger__item {
+        /* width: 22px; */
+    }
+
+
+    .map__title {
+        padding-top: 21px;
+        font-size: 26px;
+        line-height: 130%;
+        text-transform: lowercase;
+    }
+
+    .map__inner {
+        padding-top: 20px;
+        height: 309px;
+        overflow: hidden;
+    }
+
+    .map__map {
+        min-width: 361.72px;
+        transform: translateX(21px);
+    }
+
+    .map__tag {
+        width: 55px;
+        height: 65px;
+    }
+
+    .map__tag--koala {
+        right: 1.8%;
+        top: 52.6%;
+    }
+
+    .map__tag--tiger {
+        left: 70.6%;
+        top: 44.9%;
+    }
+
+    .map__tag--panda {
+        left: 66.4%;
+        bottom: 47.2%;
+    }
+
+    .map__tag--lemur {
+        left: 52.9%;
+        bottom: 28.4%;
+    }
+
+    .map__tag--gorilla {
+        right: 39.4%;
+        top: 39.7%;
+    }
+
+    .map__tag--lion {
+        right: 48.2%;
+        top: 36.33%;
+    }
+
+    .map__tag--croc {
+        right: 70.6%;
+        top: 34.6%;
+    }
+
+    .map__tag--eagle {
+        left: 1.3%;
+        top: 32.9%;
+    }
+
+    .footer {
+        width: 100%;
+        height: 710px;
+        margin-top: 0;
+    }
+
+    .footer__line--first {
+        border: none;
+        padding-bottom: 30px;
+    }
+
+    .footer__logos {
+        width: 320px;
+        height: 217px;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .footer__nav {
+        width: 300px;
+        padding-top: 4px;
+        font-size: 16px;
+    }
+    
+    .testimonials__btn-footer {
+        margin-left: 1px;
+        margin-top: 12px;
+        width: 299px;
+        height: 45px;
+        padding: 21px 30px;
+    }
+
+    .btn__text--footer {
+        width: 266px;
+        text-transform: none;
+        padding-right: 0;
+    }
+
+    .footer__line--second {
+        padding-top: 0;
+    }
+
+    .footer__copyright {
+        width: 320px;
+        height: 203px;
+        padding: 33px 0;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+        border-top: 1px solid #FFFFFF;
+    }
+
+    .footer__social {   
+        margin-bottom: 26px;
+    }
+}
